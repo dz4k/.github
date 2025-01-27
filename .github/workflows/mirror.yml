@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare https://codeberg.org/dz4k/whet whet
-      - run: git push -C denizen --mirror "https://x:$GITHUB_TOKEN@github.com/dz4k/whet.git"
+      - run: git push -C whet --mirror "https://x:$GITHUB_TOKEN@github.com/dz4k/whet.git"
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
   mirror-js4k:
     runs-on: ubuntu-latest
     steps:
       - run: git clone --bare https://codeberg.org/dz4k/js4k js4k
-      - run: git push -C denizen --mirror "https://x:$GITHUB_TOKEN@github.com/dz4k/js4k.git"
+      - run: git push -C js4k --mirror "https://x:$GITHUB_TOKEN@github.com/dz4k/js4k.git"
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
